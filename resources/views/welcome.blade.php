@@ -19,7 +19,7 @@
 
 @section('sidebar')
     <ul class="nav flex-column">
-        <li class="nav-item"><!-- Voeg hier de link toe naar de links pagina --></li>
-        <li class="nav-item"><!-- Voeg hier de link toe naar het formulier om een nieuwe link toe te voegen --></li>
+        <li class="nav-item"><a href="{{route('linkies.laralinks')}}">Laravel Links</a></li>
+        <li class="nav-item"><a href="{{route('linkies.linkie_add')}}">Link toevoegen</a></li>
     </ul>
 @endsection

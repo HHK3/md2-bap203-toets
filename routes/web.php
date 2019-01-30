@@ -21,3 +21,15 @@ Route::get('/help', function(){
 })->name('help');
 
 // Voeg hier je eigen routes toe
+
+//Laravel Links
+Route::get('/laravel-links', 'LinksController@index')
+    ->name('linkies.laralinks');
+
+//Links toevoegen pagina
+Route::get('/link-toevoegen', 'LinksController@showLinksForm')
+    ->name('linkies.linkie_add');
+
+//Links Opslaan
+Route::post('/link-opslaan', 'LinksController@handleLinksForm')
+    ->name('linkies.linkie_save');
