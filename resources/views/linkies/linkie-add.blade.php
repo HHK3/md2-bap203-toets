@@ -35,6 +35,13 @@
                 <br>
             </div>
 
+            <div class="form-group">
+                <input type="file" name="photo"  accept="image/*" />
+                @if($errors->has('photo'))
+                    <p class="text-danger">{{ $errors->first('photo') }}</p>
+                @endif
+            </div>
+
             <button type="submit" class="btn btn-success">Link opslaan</button>
         </form>
 

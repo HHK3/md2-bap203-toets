@@ -21,9 +21,16 @@ class LinksController extends Controller
             [
                 'title'         => 'required|min:8',
                 'description'   => 'required',
-                'url'           => 'required|url'
+                'url'           => 'required|url',
+                'photo'         => 'required|image|max:3000'
             ]
         );
+
+        $targetFolder = public_path('uploadphotos');
+        $filename = str_random(16) . '.' . $validateData['photo']->getClientOriginalExtension();
+
+        // Folder & Bestandsnaam aan elkaar toevoegen
+        $validateData['photo']->move($targetFolder, $filename);
 
         //New Link Object
         $link = new Link();
@@ -31,7 +38,8 @@ class LinksController extends Controller
         $link->fill([
             'title'         => $validateData['title'],
             'description'   => $validateData['description'],
-            'url'           => $validateData['url']
+            'url'           => $validateData['url'],
+            'photo'         => $filename
 
         ]);
 
