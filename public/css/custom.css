@@ -20,13 +20,12 @@ body {
   grid-template-columns: 1fr 1fr;
   max-width: 80%;
   padding-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
   height: auto;
   grid-gap: 20px;
 }
 
 .imageGallery {
+  width: 300px;
   max-width: 100%;
   height: 250px;
 }
@@ -34,6 +33,8 @@ body {
 .info {
   background: gray;
   text-align: center;
+  width: 300px;
+  max-width: 100%;
 }
 
 .info a {

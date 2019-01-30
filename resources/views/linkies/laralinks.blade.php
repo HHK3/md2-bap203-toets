@@ -17,7 +17,7 @@
             <div class="link">
                 <img src="{{ asset('uploadphotos/'. $link->photo) }}" class="imageGallery" alt="{{$link->photo}}">
                 <div class="info">
-                    <h2>{{$link->title}}</h2>
+                    <h4>{{$link->title}}</h4>
                     <h5>{{$link->description}}</h5>
                     <a href="{{$link->url}}">Linkie</a>
                 </div>
